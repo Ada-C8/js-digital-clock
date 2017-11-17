@@ -1,6 +1,16 @@
 body {
     background-color: #80d4ea;
 }
+h3 {
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  padding-top: 70px;
+  font-family: courier, monospace;
+  text-align: center;
+  color: white;
+  font-size: 100px;
+}
 
 #clock {
     height: 100px;
@@ -8,7 +18,7 @@ body {
     margin: auto;
     position: absolute;
     top: 0; left: 0; bottom: 0; right: 0;
-    padding-top: 70px;
+    padding-top: 30px;
     font-family: courier, monospace;
     text-align: center;
     color: white;
