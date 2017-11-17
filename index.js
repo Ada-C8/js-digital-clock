@@ -1,10 +1,10 @@
 // Your code here
-
-const time = function time() {
+$(document).ready(setInterval(function() {
   const date = new Date();
   const hour = date.getHours();
   const minute = date.getMinutes();
   const second = date.getSeconds();
   const timeNow = `${hour} : ${minute} : ${second}`;
-  return timeNow;
-}
+
+  $('#clock').html(timeNow);
+}, 1000));
