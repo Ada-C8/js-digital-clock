@@ -2,10 +2,9 @@
 
 const time = function time() {
   const date = new Date();
-  hour = date.getHours()
-  minute = date.getMinutes()
-  second = date.getSeconds()
-  timeNow = `${hour} : ${minute} : ${second}`;
+  const hour = date.getHours();
+  const minute = date.getMinutes();
+  const second = date.getSeconds();
+  const timeNow = `${hour} : ${minute} : ${second}`;
+  return timeNow;
 }
-
-console.log(time());
