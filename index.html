@@ -4,11 +4,43 @@
       <title>Clock Tower</title>
       <meta charset="utf-8">
       <link href="index.css" media="screen" rel="stylesheet" type="text/css"/>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.9.0/css/flag-icon.css">
   </head>
 
   <body>
-      <div id='clock'></div>
+    <main class="timezones">
+      <article class="pst-datetime">
+        <section class="flag">
+          <span class="flag-icon flag-icon-us"></span>
+        </section>
+        <section class="date">
+          <i class="fa fa-calendar"></i>
+          <span id='date'></span>
+        </section>
+        <section class="clock">
+          <i class="fa fa-clock-o"></i>
+          <span id='clock'></span>
+        </section>
+      </article>
+
+      <article class="pst-datetime">
+        <section class="flag">
+          <span class="flag-icon flag-icon-kr"></span>
+        </section>
+        <section class="date">
+          <i class="fa fa-calendar"></i>
+          <span id='kr-date'></span>
+        </section>
+        <section class="clock">
+          <i class="fa fa-clock-o"></i>
+          <span id='kr-clock'></span>
+        </section>
+      </article>
+    </main>
+
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
-
-<script src="index.js"></script>

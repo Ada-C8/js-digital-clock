@@ -1,16 +1,19 @@
 body {
-    background-color: #80d4ea;
+  background-color: #80d4ea;
 }
-
-#clock {
-    height: 100px;
-    width: 800px;
-    margin: auto;
-    position: absolute;
-    top: 0; left: 0; bottom: 0; right: 0;
-    padding-top: 70px;
-    font-family: courier, monospace;
-    text-align: center;
-    color: white;
-    font-size: 100px;
+main.timezones {
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+}
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: courier, monospace;
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  line-height: 1.6;
 }
