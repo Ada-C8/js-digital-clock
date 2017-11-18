@@ -1,0 +1,20 @@
+{
+  "name": "js-digital-clock",
+  "version": "1.0.0",
+  "description": "### Create a digital clock in your browser!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/awilson2017/js-digital-clock.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/awilson2017/js-digital-clock/issues"
+  },
+  "homepage": "https://github.com/awilson2017/js-digital-clock#readme"
+}
