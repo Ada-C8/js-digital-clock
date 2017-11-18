@@ -2,7 +2,7 @@ body {
     background-color: #80d4ea;
 }
 
-#clock {
+/*#clock {
     height: 100px;
     width: 800px;
     margin: auto;
@@ -13,4 +13,21 @@ body {
     text-align: center;
     color: white;
     font-size: 100px;
+}*/
+
+#clock {
+  min-width: 100%;
+  /*margin-top: 5em;*/
+  margin: 5em auto;
+  text-align: center;
+}
+
+#clock #hour, #clock #minutes, #clock #seconds {
+  background-color: white;
+  color: #80d4ea;
+  font-family: sans-serif;
+  display: inline-block;
+  padding: 2em;
+  margin: 5px;
+  font-weight: bold;
 }
