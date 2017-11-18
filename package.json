@@ -1,6 +1,6 @@
 {
   "name": "js-digital-clock",
-  "version": "1.0.0",
+  "version": "8.9.1",
   "description": "### Create a digital clock in your browser!",
   "main": "index.js",
   "scripts": {
