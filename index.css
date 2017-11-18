@@ -1,16 +1,37 @@
 body {
-    background-color: #80d4ea;
+  background-color: rgba(52, 102, 136, .7);
 }
 
 #clock {
-    height: 100px;
-    width: 800px;
-    margin: auto;
-    position: absolute;
-    top: 0; left: 0; bottom: 0; right: 0;
-    padding-top: 70px;
-    font-family: courier, monospace;
-    text-align: center;
-    color: white;
-    font-size: 100px;
+  height: 100px;
+  width: 800px;
+  margin: 14rem auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  font-family:  "Open Sans", sans-serif;
+  text-align: center;
+  color: white;
+  font-size: 4em;
+}
+
+.block, #date {
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px #666;
+  background-color: rgba(119, 119, 119, .5);
+
+}
+
+.block {
+  display: inline-block;
+  height: 100%;
+  width: 13%;
+  line-height: 105px;
+  margin: 1.6rem .3rem;
+}
+
+#date {
+  width: 58%;
+  margin: auto;
+  font-size: .5em;
+  padding: 1rem;
 }
