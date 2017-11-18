@@ -19,6 +19,7 @@ body {
   height: 100px;
   width: 800px;
   margin: auto;
+  padding-top: 10px;
   font-family: courier, monospace;
   text-align: center;
   color: white;
