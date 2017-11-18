@@ -1,16 +1,28 @@
 body {
-    background-color: #80d4ea;
+    background-color: #111900;
+}
+
+h1 {
+  font-size: 3em;
+  font-family: courier, monospace;
+  text-align: center;
+  color: #a5f700;
+  padding: 5%;
 }
 
 #clock {
     height: 100px;
     width: 800px;
+    background-color: black;
     margin: auto;
+    border: solid;
+    border-radius: 25px;
+    border-width: thick;
     position: absolute;
     top: 0; left: 0; bottom: 0; right: 0;
-    padding-top: 70px;
+    padding: 5% 1%;
     font-family: courier, monospace;
     text-align: center;
-    color: white;
+    color: #a5f700;
     font-size: 100px;
 }
