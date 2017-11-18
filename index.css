@@ -1,16 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 body {
-    background-color: #80d4ea;
+  background-color: #385E0F;
+  text-align: center;
+  color: white;
+  font-family: 'Roboto', sans-serif;
 }
 
-#clock {
-    height: 100px;
-    width: 800px;
-    margin: auto;
-    position: absolute;
-    top: 0; left: 0; bottom: 0; right: 0;
-    padding-top: 70px;
-    font-family: courier, monospace;
-    text-align: center;
-    color: white;
-    font-size: 100px;
+div.style {
+  border: 2px solid white;
+  height: 200px;
+  width: 400px;
+  margin: 1em;
+  display: inline-block;
+}
+
+#seattle, #hawaii, #nyc, #london, #beijing, #dubai {
+  /*height: 100px;
+  width: 800px;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  padding-top: 70px;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  color: white;
+  font-size: 100px;*/
+
+  font-size: 2em;
+  margin: 0;
 }
