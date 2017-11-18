@@ -14,6 +14,15 @@ $(document).ready(function(){
     10: 'November',
     11: 'December'
   }
+  const days = {
+    0: 'Sunday',
+    1: 'Monday',
+    2: 'Tuesday',
+    3: 'Wednesday',
+    4: 'Thursday',
+    5: 'Friday',
+    6: 'Saturday'
+  }
 
   let tick_tock = window.setInterval(clock, 1000);
   let tock_tick = window.setInterval(kr, 1000);
@@ -23,11 +32,12 @@ $(document).ready(function(){
     year = date.getFullYear();
     month = date.getMonth();
     day = date.getDate();
+    dow = date.getDay();
     hour = date.getHours();
     minute = date.getMinutes();
     second = date.getSeconds();
 
-    $('#date').html(months[month] + " " + day + ", " + year);
+    $('#date').html(days[dow] + ", " + months[month] + " " + day + ", " + year);
 
     $('#clock').html(hour + ":" + minute + ":" + second);
   }
@@ -37,11 +47,12 @@ $(document).ready(function(){
     year = kr_time.getFullYear();
     month = kr_time.getMonth();
     day = kr_time.getDate();
+    dow = kr_time.getDay();
     hour = kr_time.getHours();
     minute = kr_time.getMinutes();
     second = kr_time.getSeconds();
 
-    $('#kr-date').html(months[month] + " " + day + ", " + year);
+    $('#kr-date').html(days[dow] + ", " + months[month] + " " + day + ", " + year);
 
     $('#kr-clock').html(hour + ":" + minute + ":" + second);
   }
