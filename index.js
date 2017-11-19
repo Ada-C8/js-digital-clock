@@ -35,10 +35,10 @@ $(document).ready(() => {
   $('#tokyo').append(thisTime(17));
 
   const currentClock = function () {
-    $('#seattle').html(thisTime(0));
-    $('#newyork').html(thisTime(3));
-    $('#london').html(thisTime(8));
-    $('#tokyo').html(thisTime(17));
+    $('#seattle').html(`Seattle </br> ${thisTime(0)}`);
+    $('#newyork').html(`New York </br> ${thisTime(3)}`);
+    $('#london').html(`London </br> ${thisTime(8)}`);
+    $('#tokyo').html(`Tokyo </br> ${thisTime(17)}`);
   };
 
   // Interval uses miliseconds
