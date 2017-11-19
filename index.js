@@ -57,16 +57,9 @@ $('document').ready(() => {
   setInterval(function() {
     $('#currentDate').text(updateDate, 1000);
   });
-});
-
-$('document').ready(() => {
   setInterval(function() {
     $('#currentTime').text(updateClock, 1000);
   });
-});
-
-
-$('document').ready(() => {
   setInterval(function() {
     $('#time-travel').text(ellapsedTime, 1000);
   });
