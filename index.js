@@ -37,8 +37,8 @@ $(document).ready(() => {
   const currentClock = function () {
     $('#seattle').html(thisTime(0));
     $('#newyork').html(thisTime(3));
-    $('#newyork').html(thisTime(8));
-    $('#newyork').html(thisTime(17));
+    $('#london').html(thisTime(8));
+    $('#tokyo').html(thisTime(17));
   };
 
   // Interval uses miliseconds
