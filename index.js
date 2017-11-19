@@ -4,6 +4,14 @@
 // $(document).ready(function() { ... })
 
 $(document).ready(() => {
+  const updateTime = function (num) {
+    let updatedNum = num;
+    if (num < 10) {
+      updatedNum = `0 ${num}`;
+    }
+    return updatedNum;
+  };
+
   const thisTime = function () {
     const today = new Date();
     let h = today.getHours();
@@ -12,21 +20,14 @@ $(document).ready(() => {
     }
     let m = today.getMinutes();
     let s = today.getSeconds();
-    h = this.updateTime(h);
-    m = this.updateTime(m);
-    s = this.updateTime(s);
+    h = updateTime(h);
+    m = updateTime(m);
+    s = updateTime(s);
     if (h > 12) {
       return `${h - 12}:${m}:${s}pm`;
     }
 
     return `${h - 12}:${m}:${s}am`;
-  };
-
-  const updateTime = function (num) {
-    if (num < 10) {
-      num = `0 ${num}`;
-    };
-    return num;
   };
 
   $('#clock').append(thisTime());
