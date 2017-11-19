@@ -14,3 +14,14 @@ body {
     color: white;
     font-size: 100px;
 }
+
+#todayDate {
+  height: 100px;
+  width: 800px;
+  margin: auto;
+  padding-top: 10px;
+  font-family: courier, monospace;
+  text-align: center;
+  color: white;
+  font-size: 85px;
+}
