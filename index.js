@@ -30,16 +30,29 @@ not parsed format */
 formatted as a digital clock
 except seconds is only 1 digit */
 
-$(document).ready(function() {
-  let d = new Date();
-  let h = d.getHours();
-  let m = d.getMinutes();
-  let s = d.getSeconds();
-  let t = (h + ':' + m + ':' + s);
-  $('#clock').append(t);
-})
-
-
+// $(document).ready(function() {
+//   let d = new Date();
+//   let h = d.getHours();
+//   let m = d.getMinutes();
+//   let s = d.getSeconds();
+//   let t = (h + ':' + m + ':' + s);
+//   $('#clock').append(t);
+// })
+// function addZero(i) {
+//     if (i < 10) {
+//         i = "0" + i;
+//     }
+//     return i;
+// }
+//
+// $(document).ready(function() {
+//   let d = new Date();
+//   let h = addZero(d.getHours());
+//   let m = addZero(d.getMinutes());
+//   let s = addZero(d.getSeconds());
+//   let t = (h + ':' + m + ':' + s);
+//   $('#clock').append(t);
+// })
 
 //
 // Your code here
@@ -95,55 +108,55 @@ $(document).ready(function() {
 
 
 
-// function clock(){
-//
-// //Save the times in variables
-//
-// var today = new Date();
-//
-// var hours = today.getHours();
-// var minutes = today.getMinutes();
-// var seconds = today.getSeconds();
-//
-//
-// //Set the AM or PM time
-//
-// if (hours >= 12){
-//   meridiem = " PM";
-// }
-// else {
-//   meridiem = " AM";
-// }
-//
-//
-// //convert hours to 12 hour format and put 0 in front
-// if (hours>12){
-// 	hours = hours - 12;
-// }
-// else if (hours===0){
-// 	hours = 12;
-// }
-//
-// //Put 0 in front of single digit minutes and seconds
-//
-// if (minutes<10){
-// 	minutes = "0" + minutes;
-// }
-// else {
-// 	minutes = minutes;
-// }
-//
-// if (seconds<10){
-// 	seconds = "0" + seconds;
-// }
-// else {
-// 	seconds = seconds;
-// }
-//
-//
-// document.getElementById("clock").innerHTML = (hours + ":" + minutes + ":" + seconds + meridiem);
-//
-// }
-//
-//
-// setInterval('clock()', 1000);
+function clock() {
+
+//Save the times in variables
+
+var today = new Date();
+
+var hours = today.getHours();
+var minutes = today.getMinutes();
+var seconds = today.getSeconds();
+
+
+//Set the AM or PM time
+
+if (hours >= 12){
+  meridiem = " PM";
+}
+else {
+  meridiem = " AM";
+}
+
+
+//convert hours to 12 hour format and put 0 in front
+if (hours>12){
+	hours = hours - 12;
+}
+else if (hours===0){
+	hours = 12;
+}
+
+//Put 0 in front of single digit minutes and seconds
+
+if (minutes<10){
+	minutes = "0" + minutes;
+}
+else {
+	minutes = minutes;
+}
+
+if (seconds<10){
+	seconds = "0" + seconds;
+}
+else {
+	seconds = seconds;
+}
+
+document.getElementById("clock").innerHTML = (hours + ":" + minutes + ":" + seconds + meridiem);
+
+} //ends clock function
+
+console.log("outside the function")
+
+setInterval('clock()', 1000);
