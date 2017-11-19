@@ -1,11 +1,7 @@
-// adds leading zeros to num as string
-const pad = function pad(num, size) {
-  const str = '0'.repeat(6) + num;
-  return str.slice(str.length - size);
-};
-
-const hexPerSecMin = 4.32;
-const hexPerHr = 11.08;
+// evenly space out 255 (max base 16 to 2 places) by num possible secs/mins/hrs
+const maxNum = 255;
+const hexPerSecMin = Math.floor((maxNum / 59) * 100) / 100; // 4.32
+const hexPerHr = Math.floor((maxNum / 23) * 100) / 100; // 11.08
 
 $(document).ready(() => {
   const runClock = function runClock() {
