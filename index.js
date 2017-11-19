@@ -24,36 +24,24 @@ $(document).ready(function(){
     6: 'Saturday'
   }
 
-  let tick_tock = window.setInterval(clock, 1000);
-  let tock_tick = window.setInterval(kr, 1000);
+  let clocks = window.setInterval(time, 1000);
 
-  function clock() {
-    let date = new Date();
-    year = date.getFullYear();
-    month = date.getMonth();
-    day = date.getDate();
-    dow = date.getDay();
-    hour = date.getHours();
-    minute = date.getMinutes();
-    second = date.getSeconds();
+  function time() {
+    offsets = [0, 17];
+    dates = ['#date', '#kr-date'];
+    clocks = ['#clock', '#kr-clock'];
 
-    $('#date').html(days[dow] + ", " + months[month] + " " + day + ", " + year);
-
-    $('#clock').html(hour + ":" + minute + ":" + second);
-  }
-
-  function kr() {
-    let kr_time = new Date( new Date().getTime() + 9 * 3600 * 1000);
-    year = kr_time.getFullYear();
-    month = kr_time.getMonth();
-    day = kr_time.getDate();
-    dow = kr_time.getDay();
-    hour = kr_time.getHours();
-    minute = kr_time.getMinutes();
-    second = kr_time.getSeconds();
-
-    $('#kr-date').html(days[dow] + ", " + months[month] + " " + day + ", " + year);
-
-    $('#kr-clock').html(hour + ":" + minute + ":" + second);
+    for(let i = 0; i < 2; i++) {
+      let date = new Date( new Date().getTime() + offsets[i] * 3600 * 1000);
+      year = date.getFullYear();
+      month = date.getMonth();
+      day = date.getDate();
+      dow = date.getDay();
+      hour = date.getHours();
+      minute = date.getMinutes();
+      second = date.getSeconds();
+      $(dates[i]).html(days[dow] + ", " + months[month] + " " + day + ", " + year);
+      $(clocks[i]).html(hour + ":" + minute + ":" + second);
+    }
   }
 });
