@@ -2,7 +2,7 @@ body {
     background-color: #80d4ea;
 }
 
-#clock {
+.clock {
     height: 100px;
     width: 800px;
     margin: auto;

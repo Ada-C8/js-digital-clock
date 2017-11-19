@@ -7,14 +7,14 @@ $(document).ready(() => {
   const updateTime = function (num) {
     let updatedNum = num;
     if (num < 10) {
-      updatedNum = `0 ${num}`;
+      updatedNum = `0${num}`;
     }
     return updatedNum;
   };
 
-  const thisTime = function () {
+  const thisTime = function (timeDifference) {
     const today = new Date();
-    let h = today.getHours();
+    let h = today.getHours() + timeDifference;
     if (h >= 24) {
       h -= 24;
     }
@@ -26,14 +26,19 @@ $(document).ready(() => {
     if (h > 12) {
       return `${h - 12}:${m}:${s}pm`;
     }
-
-    return `${h - 12}:${m}:${s}am`;
+    return `${h}:${m}:${s}am`;
   };
 
-  $('#clock').append(thisTime());
+  $('#seattle').append(thisTime(0));
+  $('#newyork').append(thisTime(3));
+  $('#london').append(thisTime(8));
+  $('#tokyo').append(thisTime(17));
 
   const currentClock = function () {
-    $('#clock').html(thisTime());
+    $('#seattle').html(thisTime(0));
+    $('#newyork').html(thisTime(3));
+    $('#newyork').html(thisTime(8));
+    $('#newyork').html(thisTime(17));
   };
 
   // Interval uses miliseconds
