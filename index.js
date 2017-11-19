@@ -29,10 +29,10 @@ $(document).ready(function () {
     return num;
   };
 
-  $('#seattle').append(thisTime());
+  $('#clock').append(thisTime());
 
   const currentClock = function (){
-    $('#seattle').html(thisTime());
+    $('#clock').html(thisTime());
   };
 
   // Interval uses miliseconds
