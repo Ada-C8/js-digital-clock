@@ -1,5 +1,38 @@
 body {
-    background-color: #80d4ea;
+    background-color: #F7D1CD;
+}
+
+body.one {
+  background-color: #E8C2CA;
+}
+body.two {
+  background-color: #D1B3C4;
+}
+
+body.three {
+  background-color: #B392AC;
+}
+body.four {
+  background-color: #735D78;
+}
+body.five {
+  background-color: #B392AC;
+}
+body.six {
+  background-color: #D1B3C4;
+}
+body.seven {
+  background-color: #E8C2CA;
+}
+body.eight {
+  background-color: #F7D1CD;
+}
+body.nine {
+  background-color: #F7E5E3;
+}
+
+body.zerozero {
+  background-color: black;
 }
 
 #clock {
