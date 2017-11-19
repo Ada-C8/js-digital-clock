@@ -3,35 +3,35 @@
 // The example code causes linter to be angry:
 // $(document).ready(function() { ... })
 
-$(document).ready(function () {
-  const thisTime = function() {
-    let today = new Date();
+$(document).ready(() => {
+  const thisTime = function () {
+    const today = new Date();
     let h = today.getHours();
     if (h >= 24) {
-      h = h - 24;
+      h -= 24;
     }
     let m = today.getMinutes();
     let s = today.getSeconds();
-    h = updateTime(h);
-    m = updateTime(m);
-    s = updateTime(s);
+    h = this.updateTime(h);
+    m = this.updateTime(m);
+    s = this.updateTime(s);
     if (h > 12) {
-      return ((h-12) + ':' + m + ':' + s + ' pm');
-    } else {
-      return (h + ':' + m + ':' + s + ' am');
+      return `${h - 12}:${m}:${s}pm`;
     }
+
+    return `${h - 12}:${m}:${s}am`;
   };
 
   const updateTime = function (num) {
     if (num < 10) {
-      num = '0' + num;
+      num = `0 ${num}`;
     };
     return num;
   };
 
   $('#clock').append(thisTime());
 
-  const currentClock = function (){
+  const currentClock = function () {
     $('#clock').html(thisTime());
   };
 
