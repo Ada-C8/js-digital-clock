@@ -1,33 +1,26 @@
 // Your code here
 $(document).ready(function() {
-  // THIS RETURNS THE NEW DATE WITH THE OFFSET EACH TIME THE THIS IS INVOKED
-  const calcTime = function calcTime(city, offset) {
+  // THIS RETURNS THE NEW DATE WITH THE OFFSET EACH TIME THIS IS INVOKED
+  const calcTime = function calcTime(offset) {
 
     // create Date object for current location
     let date = new Date();
 
     // get UTC time in msec  // add local time zone offset // convert to msec
-    let utc = date.getTime() + (date.getTimezoneOffset() * 60000);
+    let timeZone = date.getTime() + (date.getTimezoneOffset() * 60000);
 
     // create new Date object for different city // using supplied offset
-    let newDate = new Date(utc + (3600000 * offset));
+    let newDate = new Date(timeZone + (3600000 * offset));
     return newDate;
   };
 
   // CREATE ARRAY WITH ALL TIME ZONE OBJECTS
-  const createTimeZones = function createTimeZones() {
-    const timeZones = {
-      'Hawaii': '-10',
-      'Seattle': '-8',
-      'New York City': '-5',
-      'London': '+1',
-      'Beijing': '+8',
-      'Dubai': '+4'
-    };
-
+  const createTimeZones = () => {
+    const timeZones = ['-10', '-8', '-5', '+1', '+8', '+4'];
     const dates = []
-    for (let city in timeZones) {
-      dates.push(calcTime(city, timeZones[city]));
+
+    for (let offset of timeZones) {
+      dates.push(calcTime(offset));
     }
     return dates;
   };
@@ -36,7 +29,7 @@ $(document).ready(function() {
   const allZones = createTimeZones();
 
   // Update each time clock
-  const updateSeconds = function updateSeconds() {
+  const updateSeconds = () => {
     // Set the seconds as + 1
     allZones[0].setSeconds(allZones[0].getSeconds() + 1);
     $('#hawaii').html(allZones[0]);
@@ -49,6 +42,7 @@ $(document).ready(function() {
     allZones[4].setSeconds(allZones[4].getSeconds() + 1);
     $('#beijing').html(allZones[4]);
     allZones[5].setSeconds(allZones[5].getSeconds() + 1);
+    allZones[5]
     $('#dubai').html(allZones[5]);
   };
 
@@ -57,3 +51,12 @@ $(document).ready(function() {
 
   setInterval(updateSeconds, 1000); // This never returns anything
 });
+
+// const timeZones = {
+//   'Hawaii': '-10',
+//   'Seattle': '-8',
+//   'New York City': '-5',
+//   'London': '+1',
+//   'Beijing': '+8',
+//   'Dubai': '+4'
+// };
