@@ -3,7 +3,7 @@ body {
 }
 
 #clock {
-    height: 100px;
+    height: 50vh;
     width: 800px;
     margin: auto;
     position: absolute;
@@ -13,4 +13,12 @@ body {
     text-align: center;
     color: white;
     font-size: 100px;
+}
+
+.time-container {
+  display: inline-block;
+}
+
+.date{
+  margin: 2rem 0;
 }
