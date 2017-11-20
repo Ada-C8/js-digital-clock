@@ -11,13 +11,13 @@ const coolClock = () => {
 
   const message = (time) => {
     if (time > 21 || time < 6) {
-      return 'Go to bed!';
+      return 'Go to bed Chris!';
     } else if (time < 12) {
-      return 'Good Morning';
+      return 'Good Morning Chris';
     } else if (time < 17) {
-      return 'Good Afternoon';
+      return 'Good Afternoon Chris';
     }
-    return 'Good Evening';
+    return 'Good Evening Chris';
   };
 
   const currentMessage = `<p class="message">${message(hour)}</p>`;
