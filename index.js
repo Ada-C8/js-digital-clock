@@ -13,10 +13,9 @@ class DisplayClock {
   constructor(utc) {
     this.today = new Date();
     if (this.today.getMonth() >= utc.dstStart && this.today.getMonth() < utc.dstEnd) {
-      this.today = this.today.setUTCHours(utc.offset + 13);
-      // TODO: Why does offset/setUTC push back 12 hours?
+      this.today = this.today.setUTCHours(this.today.getUTCHours() + utc.offset + 25);
     } else {
-      this.today = this.today.setUTCHours(utc.offset + 12);
+      this.today = this.today.setHours(this.today.getUTCHours() + utc.offset + 24); // FIX: Hacky way to get UTC time and date to work.
     }
     this.today = new Date(this.today);
   }
@@ -30,7 +29,7 @@ class DisplayClock {
 
 $(document).ready(() => {
   locales.forEach((loc) => {
-    const localClock = new DisplayClock(loc.utc);
+    let localClock = new DisplayClock(loc.utc);
     $('#dynamic-clocks').append(
       `<article class='clock'>
       <div class='place'>${loc.name}</div>
@@ -38,6 +37,7 @@ $(document).ready(() => {
       <div class='date'>${localClock.displayDate(loc.lang)}</div>
       </article>`);
     window.setInterval(() => {
+      localClock = new DisplayClock(loc.utc);
       $(`.${loc.name.split(' ')[0]}`).html(localClock.displayTime(loc.lang));
     }, 1000); // TODO: fix so class names aren't just first word
   });
