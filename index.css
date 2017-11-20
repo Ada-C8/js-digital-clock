@@ -1,16 +1,42 @@
 body {
-    background-color: #80d4ea;
+    background-color: #e4e1d7;
+}
+
+p {
+  margin: 0;
 }
 
 #clock {
-    height: 100px;
+    height: 150px;
     width: 800px;
     margin: auto;
     position: absolute;
     top: 0; left: 0; bottom: 0; right: 0;
-    padding-top: 70px;
-    font-family: courier, monospace;
+    letter-spacing: 0.1em;
+    font-family: Georgia, Times, "Times New Roman", serif;
     text-align: center;
     color: white;
+    color: rgba(255,255,255,0.6);
+    text-shadow: 2px 2px 1px rgba(100,100,50,0.25);
     font-size: 100px;
+}
+
+.date, .message {
+  letter-spacing: 0.06em;
+  font-weight: bold;
+}
+
+.date {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.message {
+  font-size: 30px;
+  font-style: italic;
+}
+
+.second {
+  display: inline-block;
+  width: 120px;
 }
