@@ -3,18 +3,21 @@
 
 
 $(document).ready(function() {
+
     let intervalID = setInterval(function () {
     let rightNow = new Date()
     let hour = rightNow.getHours()
     let minute = rightNow.getMinutes()
     let second = rightNow.getSeconds()
+
+
     $('#clock').html(`${hour}.${minute}.${second}`);
 
-    if(rightNow.getSeconds() === 00) {
-      $( 'body' ).removeAttr('class').addClass('zerozero')op;
-    }
+    // if(rightNow.getSeconds() === 00) {
+    //   $( 'body' ).removeAttr('class').addClass('zerozero')op;
+    // }
 
-    else if(rightNow.getSeconds()%10 === 1) {
+    if(rightNow.getSeconds()%10 === 1) {
       $( 'body' ).removeAttr('class').addClass('one');
     }
     else if(rightNow.getSeconds()%10 === 2) {
