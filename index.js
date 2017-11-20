@@ -1,4 +1,3 @@
-// Your code here
 $(document).ready(function() {
   // THIS RETURNS THE NEW DATE WITH THE OFFSET EACH TIME THIS IS INVOKED
   const calcTime = function calcTime(offset) {
@@ -16,47 +15,48 @@ $(document).ready(function() {
 
   // CREATE ARRAY WITH ALL TIME ZONE OBJECTS
   const createTimeZones = () => {
-    const timeZones = ['-10', '-8', '-5', '+1', '+8', '+4'];
-    const dates = []
+    const offsets = ['-10', '-8', '-5', '+1', '+8', '+4'];
 
-    for (let offset of timeZones) {
-      dates.push(calcTime(offset));
+    const selectors = ['#hawaii', '#seattle', '#nyc', '#london', '#beijing', '#dubai'];
+
+    const dates = {};
+    i = 0;
+    while (i < selectors.length) {
+      dates[selectors[i]] = calcTime(offsets[i]);
+      i++;
     }
     return dates;
   };
 
-  // Invoke method
   const allZones = createTimeZones();
 
-  // Update each time clock
+  // UPDATE EACH TIME CLOCK
   const updateSeconds = () => {
-    // Set the seconds as + 1
-    allZones[0].setSeconds(allZones[0].getSeconds() + 1);
-    $('#hawaii').html(allZones[0]);
-    allZones[1].setSeconds(allZones[1].getSeconds() + 1);
-    $('#seattle').html(allZones[1]);
-    allZones[2].setSeconds(allZones[2].getSeconds() + 1);
-    $('#nyc').html(allZones[2]);
-    allZones[3].setSeconds(allZones[3].getSeconds() + 1);
-    $('#london').html(allZones[3]);
-    allZones[4].setSeconds(allZones[4].getSeconds() + 1);
-    $('#beijing').html(allZones[4]);
-    allZones[5].setSeconds(allZones[5].getSeconds() + 1);
-    allZones[5]
-    $('#dubai').html(allZones[5]);
+    Object.keys(allZones).forEach(function(zone) {
+      let day = allZones[zone].getDate();
+      let month = allZones[zone].getMonth() + 1; // Month counts begin at 0 :|
+      let year = allZones[zone].getFullYear();
+
+      let hour = allZones[zone].getHours();
+      if (hour.toString().length == 1) {
+        hour = "0" + hour;
+      }
+      let minute = allZones[zone].getMinutes();
+      if (minute.toString().length == 1) {
+        minute = "0" + minute;
+      }
+      let seconds = allZones[zone].getSeconds() + 1;
+      if (seconds.toString().length == 1) {
+        seconds = "0" + seconds;
+      }
+      allZones[zone].setSeconds(seconds);
+      $(zone).html(day + "/" + month + "/" + year + '<br>' + hour + ":" + minute + ":" + seconds);
+    });
   };
 
   // Call function before setInterval to avoid initial delay
   updateSeconds();
 
+  // Format in a readable fashion incrementing each by 1 second
   setInterval(updateSeconds, 1000); // This never returns anything
 });
-
-// const timeZones = {
-//   'Hawaii': '-10',
-//   'Seattle': '-8',
-//   'New York City': '-5',
-//   'London': '+1',
-//   'Beijing': '+8',
-//   'Dubai': '+4'
-// };
