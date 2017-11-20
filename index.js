@@ -1,3 +1,29 @@
+// random fun stuff generator
+// this is huge and ugly and unnecessary
+// I thought it would be fun!
+// wasn't able to figure out how to read from a csv
+// used my code from Fortune Teller
+
+const STUDY_IMAGES = [
+  'https://data.whicdn.com/images/54970742/original.gif',
+  'https://media1.tenor.com/images/f89419c5bc4357c8686eb7ab380ed61c/tenor.gif',
+  'http://25.media.tumblr.com/17dff029b61e33f352bd4c707d487519/tumblr_n1sj8p3uhD1sq9yswo3_500.gif',
+  'https://data.whicdn.com/images/287013151/original.gif',
+  'https://data.whicdn.com/images/287012755/original.gif',
+  'https://data.whicdn.com/images/278595253/original.gif'
+];
+
+const updateImage = function updateImage() {
+  const i = Math.floor(Math.random() * STUDY_IMAGES.length);
+  let image = STUDY_IMAGES[i];
+  let $randomImage = $('#random-image');
+  $randomImage.attr('src', image);
+}
+
+//////////////////////////////////////
+//////////////////////////////////////
+//////////////////////////////////////
+
 // create IDs for CSS
 let $hours = $('#hours');
 let $minutes = $('#minutes');
@@ -52,11 +78,13 @@ const updateClock = function updateClock(){
   $amPm.text(amPm);
 }
 
+updateImage();
+window.setInterval(updateImage, 10000);
 // calls updateClock() with current time info and adds to the matching fields in HTML doc
 updateClock();
 
 // 'window' is current window
 // did not work with 'document'
 // https://www.w3schools.com/jsref/met_win_setinterval.asp
-// updateClock will be called every interval (how it is updated--gathers second at each 1000 milliseconds)
+// updateClock will be called every interval (gathers 'getSeconds()' at each 1000 milliseconds)
 window.setInterval(updateClock, 1000);
