@@ -2,7 +2,7 @@ $( document ).ready(function(){ // make arrow function
   setInterval('updateClock()', 1000);
 });
 
-function updateClock(timeZone = null) {
+const updateClock = function updateClock(timeZone = null) {
   const timeOffset = (timeZone === null) ? 0 : timeZone
   const now = new Date();
   console.log(now);
@@ -13,7 +13,7 @@ function updateClock(timeZone = null) {
   setDate(now);
 }
 
-function getTimeString(currentHours, currentMinutes, currentSeconds) {
+const getTimeString = function getTimeString(currentHours, currentMinutes, currentSeconds) {
   const timeOfDay = (currentHours > 12) ? 'PM' : 'AM';
   let hours = (currentHours > 12) ? currentHours - 12 : currentHours;
   hours = (currentHours === 0) ? 12 : currentHours;
@@ -23,7 +23,7 @@ function getTimeString(currentHours, currentMinutes, currentSeconds) {
   $('#clock').html(currentTimeString);
 }
 
-function setDate(date) {
+const setDate = function setDate(date) {
   const day = date.getDay();
   const month = date.getMonth();
   const year = date.getFullYear();
