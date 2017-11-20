@@ -9,15 +9,24 @@ const locales = [
   { name: 'Hong Kong', lang: 'zh-Hans-HK', utc: { offset: 8, dstStart: 12, dstEnd: 13 } },
 ];
 
+const msFromMin = function msFromMin(minutes) {
+  return minutes * 60 * 1000;
+};
+
+const msFromHours = function msFromHours(hours) {
+  return hours * 60 * 60 * 1000;
+};
+
 class DisplayClock {
   constructor(utc) {
-    this.today = new Date();
-    if (this.today.getMonth() >= utc.dstStart && this.today.getMonth() < utc.dstEnd) {
-      this.today = this.today.setUTCHours(this.today.getUTCHours() + utc.offset + 25);
+    let today = new Date();
+    const localOffset = msFromMin(today.getTimezoneOffset());
+    if (today.getMonth() >= utc.dstStart && today.getMonth() < utc.dstEnd) {
+      today = today.setTime(today.getTime() + localOffset + msFromHours(utc.offset + 1));
     } else {
-      this.today = this.today.setHours(this.today.getUTCHours() + utc.offset + 24); // FIX: Hacky way to get UTC time and date to work.
+      today = today.setTime(today.getTime() + localOffset + msFromHours(utc.offset));
     }
-    this.today = new Date(this.today);
+    this.today = new Date(today);
   }
   displayTime(locale) {
     return this.today.toLocaleTimeString(locale);
