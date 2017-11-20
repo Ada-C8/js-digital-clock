@@ -14,3 +14,12 @@ body {
     color: white;
     font-size: 100px;
 }
+
+#date-info {
+  margin: 0 auto;
+  padding-top: 50px;
+  text-align: center;
+  font-family: courier, monospace;
+  color: white;
+  font-size: 70px;
+}
