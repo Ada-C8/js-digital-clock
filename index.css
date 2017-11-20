@@ -14,3 +14,13 @@ body {
     color: white;
     font-size: 100px;
 }
+
+#date {
+  background: rgba(0, 0, 0, 0.1);
+  color: #fff;
+  font-family: "Open Sans", sas-serif;
+  font-size: 2em;
+  padding: 0.5em;
+  text-align: center;
+  margin-top: 200px;
+}
