@@ -29,10 +29,10 @@ $(document).ready(() => {
     return `${h}:${m}:${s}am`;
   };
 
-  $('#seattle').append(thisTime(0));
-  $('#newyork').append(thisTime(3));
-  $('#london').append(thisTime(8));
-  $('#tokyo').append(thisTime(17));
+  $('#seattle').html(`Seattle </br> ${thisTime(0)}`);
+  $('#newyork').html(`New York </br> ${thisTime(3)}`);
+  $('#london').html(`London </br> ${thisTime(8)}`);
+  $('#tokyo').html(`Tokyo </br> ${thisTime(17)}`);
 
   const currentClock = function () {
     $('#seattle').html(`Seattle </br> ${thisTime(0)}`);
