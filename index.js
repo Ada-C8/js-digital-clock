@@ -12,7 +12,7 @@ $(document).ready(function() {
     for(let city in clocks) {
       let time = new Date();
       removeLocalOffset(time);
-      offsetTime(time, clocks[city])
+      offsetTime(time, clocks[city]);
       $('#' + city + ' > .hours').text(`${time.getHours()}`.padStart(2, '0'));
       $('#' + city + ' > .minutes').text(`${time.getMinutes()}`.padStart(2, '0'));
       $('#' + city + ' > .seconds').text(`${time.getSeconds()}`.padStart(2, '0'));
