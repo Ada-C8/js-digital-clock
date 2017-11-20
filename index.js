@@ -5,6 +5,12 @@
 //  individual hour, minute and second information.
 // Use the setInterval method to utilize the function you've created to update each second.
 
+function prettifyZero(num) {
+  if (num < 10) {
+    return `0${num}`;
+  }
+  return num;
+}
 
 const calculateTime = function calculateTime() {
   // Calculates Time
@@ -14,9 +20,10 @@ const calculateTime = function calculateTime() {
 
 
   const currentTime = new Date();
-  const hour = currentTime.getHours();
-  const minute = currentTime.getMinutes();
-  const second = currentTime.getSeconds();
+  const hour = prettifyZero(currentTime.getHours());
+  const minute = prettifyZero(currentTime.getMinutes());
+  const second = prettifyZero(currentTime.getSeconds());
+
 
   hoursContainer.html(hour);
   minutesContainer.html(`: ${minute}`);
@@ -28,5 +35,6 @@ const calculateTime = function calculateTime() {
   dateContainer.html(date);
 
 };
+
 
 window.setInterval(calculateTime, 500);
