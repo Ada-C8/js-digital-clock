@@ -7,15 +7,18 @@ function hexClock() {
   let hours = time.getHours().toString();
   let minutes = time.getMinutes().toString();
   let seconds = time.getSeconds().toString();
-  let session = "AM";
+  let session = "PM";
 
   if (hours === 0) {
     hours = 12;
   }
 
-  if(hours > 12){
+  if (hours < 12 ){
+    session = "AM";
+  }
+
+  if (hours > 12) {
     hours = hours - 12;
-    session = "PM";
   }
 
   if(hours < 10){
