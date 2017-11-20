@@ -7,10 +7,27 @@
 const STUDY_IMAGES = [
   'https://data.whicdn.com/images/54970742/original.gif',
   'https://media1.tenor.com/images/f89419c5bc4357c8686eb7ab380ed61c/tenor.gif',
-  'http://25.media.tumblr.com/17dff029b61e33f352bd4c707d487519/tumblr_n1sj8p3uhD1sq9yswo3_500.gif',
   'https://data.whicdn.com/images/287013151/original.gif',
   'https://data.whicdn.com/images/287012755/original.gif',
-  'https://data.whicdn.com/images/278595253/original.gif'
+  'https://data.whicdn.com/images/278595253/original.gif',
+  'https://media.giphy.com/media/AaGsBkc5WKQUg/giphy.gif',
+  'https://media1.tenor.com/images/ac699b4f59ea1f649e25f32e78a0e4c1/tenor.gif',
+  'https://media.giphy.com/media/RUtoJvFmaJJBu/giphy.gif',
+  'https://66.media.tumblr.com/e1095c11b0428ab234245980fc32440e/tumblr_inline_o7fczoVbnR1tat2xb_500.gif',
+  'https://pa1.narvii.com/5706/7434da0d5b525fdab6b851a73f26496657ce95b7_hq.gif',
+  'https://zippy.gfycat.com/CornyEvenGrayreefshark.gif',
+  'http://www.reactiongifs.com/r/sad.gif',
+  'https://i.imgur.com/YKZEzRx.jpg',
+  'https://s-media-cache-ak0.pinimg.com/originals/cc/11/2a/cc112aadc97c39b880f79fe44713c1a3.gif',
+  'https://s-media-cache-ak0.pinimg.com/originals/e6/b7/33/e6b733e17b68a922253ca0f0428a569e.gif',
+  'http://media.tumblr.com/927493cb46c286c56841937dab8b395b/tumblr_inline_nc7i9nSap01s6lw3t.gif',
+  'https://media1.tenor.com/images/420141860295ff5ad26208ff187431ce/tenor.gif',
+  'https://gifimage.net/wp-content/uploads/2017/09/anime-typing-gif-2.gif',
+  'https://78.media.tumblr.com/503307fc1bf3f184e80c217ff4ff7569/tumblr_o96nxvPnHE1tgoxx3o1_500.gif',
+  'http://78.media.tumblr.com/a0c9149c20703dc759ee32f220d93b27/tumblr_ol24rlfCaP1vwtn8so1_500.gif',
+  'https://media.giphy.com/media/JBgjP8Iye0X60/giphy.gif',
+  'https://fat.gfycat.com/IdealisticUglyKitten.gif',
+  'http://i.imgur.com/7UfcMM3.gif'
 ];
 
 const updateImage = function updateImage() {
@@ -79,7 +96,7 @@ const updateClock = function updateClock(){
 }
 
 updateImage();
-window.setInterval(updateImage, 10000);
+window.setInterval(updateImage, 5000);
 // calls updateClock() with current time info and adds to the matching fields in HTML doc
 updateClock();
 
