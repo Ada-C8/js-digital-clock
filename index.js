@@ -1,13 +1,8 @@
 
 $(document).ready (function() {
-
-  console.log('here');
-
   getTime();
   printOutDay();
-
 });
-
 
 const getTime = function getTime() {
   setInterval(getTime, 1000);
@@ -27,7 +22,6 @@ const getTime = function getTime() {
   };
   document.getElementById('clock').innerHTML =
     hours + ":" + minutes + ":" + seconds;
-
 };
 
 const printOutDay = function printOutDay() {
@@ -41,9 +35,11 @@ const printOutDay = function printOutDay() {
 
   document.getElementById('date').innerHTML =
   weekday + ", " + month + " " + day + ", " + year;
-
 };
 
-$('.menu-toggle').click( function() {
-    $("to-nineties").toggleClass("someClass");
-} );
+// $('.to-nineties').click( function() {
+//   if ('#nineties') {
+//     $('#nineties').removeAttr('id', 'nineties');
+//   };
+//   $('#style').attr('id', 'nineties');
+// } );
