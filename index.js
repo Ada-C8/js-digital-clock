@@ -17,6 +17,7 @@ function display_clock() {
   // let year = time.getYear();
 
   $(document).ready(()=>{
+    // BUG: when single digit, does not display 0, (i.e 19 : 27 : 2 instead of 19 : 27 : 02)
     $('#clock').text(`${hours} : ${minutes} : ${seconds}`);
     // $('#date').text(`${month} ${day}, ${year}`);
     $('#date').text(time.toLocaleDateString())
