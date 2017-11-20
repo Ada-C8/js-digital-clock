@@ -1,6 +1,6 @@
 $(document).ready(function() {
   // THIS RETURNS THE NEW DATE WITH THE OFFSET EACH TIME THIS IS INVOKED
-  const calcTime = function calcTime(offset) {
+  const calcTime = (offset) => {
 
     // create Date object for current location
     let date = new Date();
@@ -32,7 +32,7 @@ $(document).ready(function() {
 
   // UPDATE EACH TIME CLOCK
   const updateSeconds = () => {
-    Object.keys(allZones).forEach(function(zone) {
+    Object.keys(allZones).forEach((zone) => {
       let day = allZones[zone].getDate();
       let month = allZones[zone].getMonth() + 1; // Month counts begin at 0 :|
       let year = allZones[zone].getFullYear();
