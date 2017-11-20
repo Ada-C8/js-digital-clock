@@ -32,24 +32,24 @@ $(document).ready(() => {
   // The commented out lines make linter happy, but don't work as expected.
   // Not sure how to make linter happy with the $ function
 
-  $('#seattle').html(`Seattle </br> ${thisTime(0)}`);
-  // document.getElementByID('seattle').html(`Seattle </br> ${thisTime(0)}`);
-  $('#newyork').html(`New York </br> ${thisTime(3)}`);
-  // document.getElementByID('newyork').html(`New York </br> ${thisTime(3)}`);
-  $('#london').html(`London </br> ${thisTime(8)}`);
-  // document.getElementByID('london').html(`London </br> ${thisTime(8)}`);
-  $('#tokyo').html(`Tokyo </br> ${thisTime(17)}`);
-  // document.getElementByID('tokyo').html(`Tokyo </br> ${thisTime(17)}`);
+  $('#seattle').html(`<p> Seattle </br> ${thisTime(0)}</p>`);
+  // document.getElementByID('seattle').html(`<p>Seattle </br> ${thisTime(0)}</p>`);
+  $('#newyork').html(`<p> New York </br> ${thisTime(3)}</p>`);
+  // document.getElementByID('newyork').html(`<p>New York </br> ${thisTime(3)}</p>`);
+  $('#london').html(`<p>London </br> ${thisTime(8)}</p>`);
+  // document.getElementByID('london').html(`<p>London </br> ${thisTime(8)}</p>`);
+  $('#tokyo').html(`<p>Tokyo </br> ${thisTime(17)}</p>`);
+  // document.getElementByID('tokyo').html(`<p>Tokyo </br> ${thisTime(17)}</p>`);
 
   const currentClock = function () {
-    $('#seattle').html(`Seattle </br> ${thisTime(0)}`);
-    // document.getElementByID('seattle').html(`Seattle </br> ${thisTime(0)}`);
-    $('#newyork').html(`New York </br> ${thisTime(3)}`);
-    // document.getElementByID('newyork').html(`New York </br> ${thisTime(3)}`);
-    $('#london').html(`London </br> ${thisTime(8)}`);
-    // document.getElementByID('london').html(`London </br> ${thisTime(8)}`);
-    $('#tokyo').html(`Tokyo </br> ${thisTime(17)}`);
-    // document.getElementByID('tokyo').html(`Tokyo </br> ${thisTime(17)}`);
+    $('#seattle').html(`<p> Seattle </br> ${thisTime(0)}</p>`);
+    // document.getElementByID('seattle').html(`<p>Seattle </br> ${thisTime(0)}</p>`);
+    $('#newyork').html(`<p>New York </br> ${thisTime(3)}</p>`);
+    // document.getElementByID('newyork').html(`<p>New York </br> ${thisTime(3)}</p>`);
+    $('#london').html(`<p>London </br> ${thisTime(8)}</p>`);
+    // document.getElementByID('london').html(`<p>London </br> ${thisTime(8)}</p>`);
+    $('#tokyo').html(`<p>Tokyo </br> ${thisTime(17)}</p>`);
+    // document.getElementByID('tokyo').html(`<p> Tokyo </br> ${thisTime(17)}</p>`);
   };
 
   // Interval uses miliseconds
