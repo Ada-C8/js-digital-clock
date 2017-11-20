@@ -15,7 +15,7 @@ $(document).ready(function() {
 
   // CREATE ARRAY WITH ALL TIME ZONE OBJECTS
   const createTimeZones = () => {
-    const offsets = ['-10', '-8', '-5', '+1', '+8', '+4'];
+    const offsets = ['-10', '-8', '-5', '0', '+8', '+4'];
 
     const selectors = ['#hawaii', '#seattle', '#nyc', '#london', '#beijing', '#dubai'];
 
