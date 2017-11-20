@@ -10,9 +10,16 @@ const clock = function clock() {
   let currentMinute = currentTime.getMinutes();
   let currentSecond = currentTime.getSeconds();
 
+  let digitAdjust = function digitAdjust(number) {
+    if (number < 10) {
+      number = '0' + number;
+    }
+    return number;
+  };
+
 $('#date').html('<p>' + currentDay + '</p>' + '<p>' + currentMonth + ' ' + currentTime.getDate() + ', ' + currentTime.getFullYear() + '</p>');
 
-  $('#time').html('<p>' + currentTime.getHours() + ':' + currentTime.getMinutes() + ':' + currentTime.getSeconds() + '</p>');
+  $('#time').html('<p>' + digitAdjust(currentHour) + ':' + digitAdjust(currentMinute) + ':' + digitAdjust(currentSecond) + '</p>');
 };
 
 setInterval(clock, 1000);
