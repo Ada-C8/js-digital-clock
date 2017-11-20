@@ -43,6 +43,24 @@ const clickOrange = $('div').click( function() {
 
 const keyAlert = $('body').keydown(function(event){
   if (event.key === 'a') {
-    alert("hey you got an a")
+    color = nextColor();
+    $('#clock').css("background", color);
+  } else if (event.key === 'z') {
+    color = nextColor();
+    $('#date').css("background", color);
+
   }
 });
+
+const nextColor = function nextColor() {
+  hexChars = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"];
+  firstColor = '#';
+  secondColor = '#';
+  for(let i=0; i < 6; i++) {
+    firstColor += (hexChars[Math.floor(Math.random()*hexChars.length)]);
+    secondColor += (hexChars[Math.floor(Math.random()*hexChars.length)]);
+  }
+  const degrees = Math.floor(Math.random()* 360);
+  const percentage = Math.floor(Math.random()*90);
+  return `linear-gradient(${degrees}deg, ${firstColor}, ${firstColor} ${percentage}%, ${secondColor})`
+};
