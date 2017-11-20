@@ -1,5 +1,10 @@
 $( document ).ready(function(){ // make arrow function
   setInterval('updateClock()', 1000);
+  // $('div').click( function() {
+  //   $(this).toggleClass('cute');
+  // })
+  clickOrange;
+  keyAlert;
 });
 
 const updateClock = function updateClock(timeZone = null) {
@@ -30,3 +35,14 @@ const setDate = function setDate(date) {
   const dateString = `${month}-${day}-${year}`;
   $('#date').html(dateString);
 }
+
+
+const clickOrange = $('div').click( function() {
+  $(this).toggleClass('cute');
+});
+
+const keyAlert = $('body').keydown(function(event){
+  if (event.key === 'a') {
+    alert("hey you got an a")
+  }
+});

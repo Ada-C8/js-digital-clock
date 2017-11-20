@@ -24,3 +24,14 @@ body {
   color: white;
   text-shadow: 0px 10px 20px #eee
 }
+
+#lil-guy {
+  position: absolute;
+  margin-top: 300px;
+}
+
+.cute {
+  /*color: orange;*/
+  background-color: orange
+
+}
