@@ -2,18 +2,19 @@
 const myClock = () => {
   let date = new Date();
   let timeString = date.toLocaleTimeString();
+  const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  let dateString = new Intl.DateTimeFormat('en-US', dateOptions).format(date)
   const timeOptions = {
     hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true,
   };
-  // document.getElementById('local').innerHTML = date.toLocaleTimeString();
-  $('.clock').html(`<p> ${timeString} <p>`);
+  $('.clock').html(`<p> ${timeString} <p><p id= 'date'> ${dateString} <p>`);
 
 };
 
 const display = setInterval(myClock, 1000);
 
 
-// Optional Enhancements- To Be Continued.. Notes Below
+// Optional Enhancements- to be continued.. Notes Below
 
 // *****Other locations**********
   // timeOptions.timeZone = 'Asia/Seoul';
