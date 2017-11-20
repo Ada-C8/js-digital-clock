@@ -39,8 +39,7 @@ class DisplayClock {
 $(document).ready(() => {
   locales.forEach((loc) => {
     let localClock = new DisplayClock(loc.utc);
-    $('#dynamic-clocks').append(
-      `<article class='clock'>
+    $('#dynamic-clocks').append(`<article class='clock'>
       <div class='place'>${loc.name}</div>
       <div class='time ${loc.name}'></div>
       <div class='date'>${localClock.displayDate(loc.lang)}</div>
