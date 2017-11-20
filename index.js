@@ -32,8 +32,8 @@ const STUDY_IMAGES = [
 
 const updateImage = function updateImage() {
   const i = Math.floor(Math.random() * STUDY_IMAGES.length);
-  let image = STUDY_IMAGES[i];
-  let $randomImage = $('#random-image');
+  const image = STUDY_IMAGES[i];
+  const $randomImage = $('#random-image');
   $randomImage.attr('src', image);
 }
 
@@ -42,10 +42,10 @@ const updateImage = function updateImage() {
 //////////////////////////////////////
 
 // create IDs for CSS
-let $hours = $('#hours');
-let $minutes = $('#minutes');
-let $seconds = $('#seconds');
-let $amPm = $('#ampm');
+const $hours = $('#hours');
+const $minutes = $('#minutes');
+const $seconds = $('#seconds');
+const $amPm = $('#ampm');
 
 // function compiles all info needed to track time
 // and adds the text created to the fields with matching IDs
@@ -95,11 +95,12 @@ const updateClock = function updateClock(){
   $amPm.text(amPm);
 }
 
+// displays a random image every 5 seconds
 updateImage();
 window.setInterval(updateImage, 5000);
+
 // calls updateClock() with current time info and adds to the matching fields in HTML doc
 updateClock();
-
 // 'window' is current window
 // did not work with 'document'
 // https://www.w3schools.com/jsref/met_win_setinterval.asp
