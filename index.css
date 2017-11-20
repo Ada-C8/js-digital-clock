@@ -1,26 +1,35 @@
 body {
-    background-color: #80d4ea;
+  background-color: #80d4ea;
+  font-family: courier, monospace;
+  text-align: center;
+  font-size: 3vh;
 }
 
 .timebox {
-  height: 100px;
-  width: 800px;
+  color: white;
   margin: auto;
-  position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0;
-  /*padding-top: 70px;*/
 }
 
 .clock {
-    font-family: courier, monospace;
-    text-align: center;
-    color: white;
-    font-size: 50px;
+  display: inline-block;
+  background-color: white;
+  border-radius: 50%;
+  width: 315px;
+  height: 315px;
+  margin: 15px;
+  padding: 10px;
+}
+
+.place {
+  padding: 45px;
+  color: #80d4ea;
 }
 
 .date {
-    font-family: courier, monospace;
-    text-align: center;
-    color: white;
-    font-size: 50px;
+  color: #80d4ea;
+}
+
+.time {
+  color: #80d4ea;
+  font-size: 5vh;
 }
