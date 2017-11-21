@@ -1,12 +1,17 @@
 body {
-    background-color: #80d4ea;
+    background-color: #d3d3d3;
+    text-align: center;
 }
+
 
 #local {
     font-family: courier, monospace;
     text-align: center;
     color: white;
     font-size: 100px;
+    background-color: lightgreen;
+    max-width: 60%;
+    margin: auto;
 }
 
 #date {

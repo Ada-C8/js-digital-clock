@@ -11,7 +11,27 @@ const myClock = () => {
 
 };
 
+let supportedTimezonesByPlace = {
+  seoul: 'Asia/Seoul',
+  peru: 'America/Lima',
+  berlin: 'Europe/Berlin',
+}
 const display = setInterval(myClock, 1000);
+
+
+
+// ${document}.ready(() => {
+//   const addClock = function addClock(place) {
+//     let loc = place.toLowerCase();
+//     if (supportedTimezoneByPlace.place) {
+//       $('body').append(`<div id= ${loc} class = 'clock'> </div>`)
+//   }
+//   ${'body'}.on('click', 'button', function addClock(place) {
+//     const loc = ($(this).html()).toLowerCase();
+//     if (supportedTimezoneByPlace.loc) {
+//       $('body').append(`<div id= ${loc} class = 'clock'> </div>`)
+//   } )
+// }
 
 
 // Optional Enhancements- to be continued.. Notes Below
