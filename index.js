@@ -21,7 +21,7 @@ class DisplayClock {
   constructor(utc) {
     let today = new Date();
     const localOffset = msFromMin(today.getTimezoneOffset());
-    if (today.getMonth() >= utc.dstStart && today.getMonth() < utc.dstEnd) {
+    if (today.getMonth() >= utc.dstStart && today.getMonth() < utc.dstEnd) { // NOTE: Not sure if necessary as I need to learn more about UTC time
       today = today.setTime(today.getTime() + localOffset + msFromHours(utc.offset + 1));
     } else {
       today = today.setTime(today.getTime() + localOffset + msFromHours(utc.offset));
