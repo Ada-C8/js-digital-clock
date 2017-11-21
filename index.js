@@ -29,14 +29,14 @@ function amPm(){
       return "in the evening"}
   }
 function convertHour(){
-    if (hour == 0) {
-      return 12;
-    } else if (hour > 12) {
-      return hour - 12;
-    } else {
-      return hour;
-    }
+  if (hour == 0) {
+    return 12;
+  } else if (hour > 12) {
+    return hour - 12;
+  } else {
+    return hour;
   }
+}
 function addZero(input){
   if (input < 10) {
     return '0' + input.toString();
