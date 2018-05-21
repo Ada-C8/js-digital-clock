@@ -1,16 +1,53 @@
-body {
-    background-color: #80d4ea;
+* {
+  font-family: 'Timmana', sans-serif;
+  box-sizing: border-box;
 }
-
-#clock {
-    height: 100px;
-    width: 800px;
-    margin: auto;
-    position: absolute;
-    top: 0; left: 0; bottom: 0; right: 0;
-    padding-top: 70px;
-    font-family: courier, monospace;
-    text-align: center;
-    color: white;
-    font-size: 100px;
+body {
+  background: #D0EFED;
+  color: #595E63;
+}
+.row {
+  padding-top: 12%;
+  margin-top: 10%;
+}
+.today {
+  text-align: center;
+  font-size:1.75em;
+  letter-spacing: 20px;
+  padding: 20px;
+}
+.day {
+  padding-top: 40px;
+  font-size: 5em;
+  line-height: 100px;
+}
+.month {
+  color: #939DA6;
+  line-height: 20px;
+}
+.weekDay {
+  margin-top: 20px;
+  line-height: 20px;
+}
+.year {
+  line-height: 20px;
+}
+.clock {
+  padding: 10px 5px 30px 5px;
+  text-align: center;
+  font-size: .75em;
+  background: #98D6BC;
+  border-radius: 20px;
+}
+.time {
+  padding-top: 110px;
+  font-size: 7em;
+  letter-spacing: 10px;
+  line-height: 70px;
+}
+.amPm {
+  font-size: 2em;
+  line-height: 40px;
+  letter-spacing: 15px;
+  color: #939DA6;
 }
